@@ -57,3 +57,7 @@ Storybook is a great tool to document your components and visually test them in 
 ```bash
 npm run storybook
 ```
+
+## Embold
+
+Embold scanning is also enabled
