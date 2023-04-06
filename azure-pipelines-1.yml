@@ -17,8 +17,7 @@ steps:
     method: 'POST'
     headers: |
       {
-      "Content-Type":"application/json", 
-      "AuthToken": "$(system.AccessToken)"
+        "AuthToken": "$(system.AccessToken)"
       }
     urlSuffix: '/organizations/gh/abhi8hexa/repositories/prolog-app'
     waitForCompletion: 'false'
