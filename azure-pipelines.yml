@@ -20,7 +20,7 @@ steps:
     method: 'POST'
     headers: |
       {
-      "AuthToken": "Bearer $(System.AccessToken)"
+      "AuthToken": "$(system.AccessToken)"
       }
     urlSuffix: '/repositories/707873b328337192012c59ca7fa25bec/scan'
     waitForCompletion: 'false'
