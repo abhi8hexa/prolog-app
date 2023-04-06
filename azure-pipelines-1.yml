@@ -14,7 +14,7 @@ steps:
   inputs:
     connectionType: 'connectedServiceName'
     serviceConnection: 'Codacy'
-    method: 'POST'
+    method: 'GET'
     headers: |
       {
         "AuthToken": "$(system.AccessToken)"
