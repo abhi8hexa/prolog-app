@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool: server
+
+steps:
+
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    serviceConnection: 'Codacy'
+    method: 'POST'
+    headers: |
+      {
+      "Content-Type":"application/json", 
+      "AuthToken": "$(system.AccessToken)"
+      }
+    urlSuffix: '/organizations/gh/abhi8hexa/repositories/prolog-app'
+    waitForCompletion: 'false'
